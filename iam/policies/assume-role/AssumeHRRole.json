@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "sts:AssumeRole",
+            "Resource": "arn:aws:iam::728280008824:role/ZTA-HR-ConfidentialAccess-Role",
+            "Condition": {
+                "Bool": {
+                    "aws:MultiFactorAuthPresent": "true"
+                },
+                "NumericLessThan": {
+                    "aws:MultiFactorAuthAge": "3600"
+                }
+            }
+        }
+    ]
+}
