@@ -1,0 +1,4 @@
+GroupId,GroupName,Type,IpProtocol,FromPort,ToPort,IpRanges,Ipv6Ranges,PrefixListIds,UserIdGroupPairs
+sg-04f8620df8d2888b3,default,Inbound/Ingress,tcp,0,65535,,,,sg-04f8620df8d2888b3
+sg-04f8620df8d2888b3,default,Inbound/Ingress,tcp,443,443,10.1.0.0/16,,,
+sg-04f8620df8d2888b3,default,Outbound/Egress,'-1,,,0.0.0.0/0,,,
