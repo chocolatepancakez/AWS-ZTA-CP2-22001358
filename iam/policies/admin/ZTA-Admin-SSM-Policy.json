@@ -1,0 +1,49 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowBasicSSMSessionForSpecificInstance",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:StartSession",
+                "ssm:TerminateSession",
+                "ssm:DescribeSessions",
+                "ssm:GetConnectionStatus"
+            ],
+            "Resource": [
+                "arn:aws:ec2:ap-southeast-2:728280008824:instance/i-0a956979ae12085d3",
+                "arn:aws:ssm:ap-southeast-2:728280008824:document/SSM-SessionManagerRunShell",
+                "arn:aws:ssm:ap-southeast-2:728280008824:session/*"
+            ]
+        },
+        {
+            "Sid": "AllowSendCommandOnlyIfTagged",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:SendCommand",
+                "ssm:GetCommandInvocation"
+            ],
+            "Resource": [
+                "arn:aws:ssm:ap-southeast-2:728280008824:document/AWS-RunShellScript",
+                "arn:aws:ec2:ap-southeast-2:728280008824:instance/i-0a956979ae12085d3"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:ResourceTag/Admin-Access": "true"
+                }
+            }
+        },
+        {
+            "Sid": "SSMCoreMessaging",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:DescribeInstanceInformation",
+                "ssmmessages:CreateControlChannel",
+                "ssmmessages:CreateDataChannel",
+                "ssmmessages:OpenControlChannel",
+                "ssmmessages:OpenDataChannel"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
