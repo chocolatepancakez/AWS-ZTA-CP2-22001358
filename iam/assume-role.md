@@ -60,7 +60,7 @@ This role assumption model provides the following security guarantees:
 
 The JSON for inline role assumption policies are provided under:
 
-`iam/policies/role-assumption`
+`iam/policies/assume-role`
 
 These files serve as implementation evidence for the access control model described in this file.
 
