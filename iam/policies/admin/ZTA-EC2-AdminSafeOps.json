@@ -1,0 +1,41 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "EC2BasicOperations",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:RebootInstances",
+                "ec2:ModifyInstanceAttribute",
+                "ec2:CreateTags",
+                "ec2:DeleteTags",
+                "ec2:CreateVolume",
+                "ec2:AttachVolume",
+                "ec2:DetachVolume",
+                "ec2:ModifyVolume"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "EC2ReadEverything",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "EC2SafeSecurityGroupChanges",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:AuthorizeSecurityGroupEgress",
+                "ec2:RevokeSecurityGroupIngress",
+                "ec2:RevokeSecurityGroupEgress"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
