@@ -20,7 +20,7 @@ The project implements a fully private Zero Trust reference model in AWS using n
 ## Repository Structure
 - `architecture/` – Reference model and network diagrams
 - `iam/` – IAM users, groups, roles, trust and permission policies
-- `network/` – VPC, Security Groups, NACL, and VPC endpoint configurations
+- `vpc/` – VPC design, Security Groups, NACL, and VPC endpoint configurations
 - `ssm/` – Session Manager configuration and logging setup
 
 ---
