@@ -20,6 +20,11 @@ To enforce Zero Trust principles, the VPC does not include:
 
 Although public subnets exist within the VPC, they remain unused and have no routing paths to the internet. This ensures that all compute resources operate in a fully private network environment.
 
+## Route Table Configuration
+The route tables associated with all subnets contain only the default local VPC route and a route to the Amazon S3 Gateway VPC endpoint. No routes to an Internet Gateway, NAT Gateway, or external networks are configured.
+
+This ensures that network traffic is restricted to internal VPC communication and approved private AWS service access only.
+
 ## Zero Trust Alignment
 The private-only operational design of the VPC supports the Zero Trust principle of “never trust, always verify” by:
 - Eliminating implicit trust based on network location
