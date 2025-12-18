@@ -1,0 +1,57 @@
+====================== HR CONFIDENTIAL STORAGE ======================
+
+File Name      : hr_confidential_records.txt
+Classification : Highly Restricted – HR Only
+Last Update    : 2025-11-18
+
+---------------------------------------------------------------------
+
+[SUMMARY OF SENSITIVE HR RECORDS]
+
+- Disciplinary reports
+- Salary review documents
+- HR investigation notes
+- Termination records
+- Medical leave documentation
+- Internal complaints
+- Performance review files
+
+---------------------------------------------------------------------
+
+Case ID  : HR-TERM-2024-031  
+Employee : Bryan Lee  
+Status   : Completed  
+Notes    : Termination processed following repeated performance issues.  
+           Final settlement prepared according to HR policy.  
+
+---------------------------------------------------------------------
+
+Case ID  : HR-INV-2025-044  
+Employee : Sarah Lee  
+Status   : Under Review  
+Notes    : Investigation opened regarding workplace conduct concerns.  
+           Initial statements collected; follow-up discussions scheduled.  
+
+---------------------------------------------------------------------
+
+Case ID  : HR-DISC-2023-112  
+Employee : Marcus Teh  
+Status   : Closed  
+Notes    : Written warning issued for repeated attendance violations.  
+           Compliance monitoring completed with no further incidents.  
+
+---------------------------------------------------------------------
+
+[SECURITY NOTICE]
+
+This file is stored on a Zero-Trust protected EC2 instance:
+
+- No public access
+- No inbound ports
+- No SSH
+- No Internet access
+- Access allowed only via AWS SSM Session Manager
+
+Unauthorized access or distribution is strictly prohibited.
+
+=====================================================================
