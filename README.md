@@ -12,9 +12,11 @@ The repository is structured to reflect the key architectural and security compo
 
 - `architecture/`
 - `iam/`
-- `ssm/`
-- `logging/` 
-- `validation/` 
+- `ssm/`  
+- `ec2/` 
+- `s3/`
+- `logging/`
+- `validation/`
 
 ## Folder Descriptions
 
@@ -42,6 +44,27 @@ This includes the use of Session Manager to eliminate SSH access and inbound net
 
 ---
 
+### EC2 Configuration (`/ec2`)
+Documents EC2-related configuration artefacts, including:
+- User data scripts executed during instance launch
+- Administrative monitoring scripts executed via AWS Systems Manager
+
+These artefacts demonstrate how EC2 instances are prepared for secure, identity-based access and monitored without relying on SSH or public network connectivity.
+
+---
+
+### S3 Access (`/s3`)
+Documents the configuration and usage of Amazon S3 within the Zero Trust Architecture.
+
+This includes:
+- A representative HR-confidential artefact used for access control demonstration
+- Documentation of IAM-based access enforcement
+- Private access via an S3 VPC gateway endpoint
+
+No real or sensitive production data is included.
+
+---
+
 ### Logging (`/logging`)
 Documents the logging and monitoring mechanisms implemented in the system, including:
 - AWS CloudTrail for identity-based API activity
@@ -66,6 +89,7 @@ Each metric is validated through controlled test cases performed on the deployed
 
 - AWS-managed policies are referenced by name and are not included as JSON files.
 - All configuration files reflect the final deployed system state.
+- All data artefacts are simulated and used solely for academic demonstration.
 - This repository is intended for academic submission and review purposes and is not designed as a reusable deployment template.
 
 ---
